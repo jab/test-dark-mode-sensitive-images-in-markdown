@@ -1,16 +1,35 @@
 # Testing dark-mode-sensitive images in GitHub markdown
 
-### GitHub's [anchor filter URL syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#specifying-the-theme-an-image-is-shown-to) works
+* [View source](https://raw.githubusercontent.com/jab/test-dark-mode-sensitive-images-in-markdown/main/README.md)
 
+* Toggle your theme between light mode and dark mode
+  while viewing the demos below.
+
+
+### GitHub's [anchor filter URL syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#specifying-the-theme-an-image-is-shown-to) works:
+
+#### Only shown to GitHub Light Mode users:
 ![Only shown to GitHub Light Mode users](/light-mode.svg#gh-light-mode-only)
+
+#### Only shown to GitHub Dark Mode users:
 ![Only shown to GitHub Dark Mode users](/dark-mode.svg#gh-dark-mode-only)
 
 
-### Inlined `<img src="test.svg">` does not work
+### Inlined `<img src="test.svg">` does not work:
+
+The `@media (prefers-color-scheme: dark)`
+selector in the following `test.svg`
+to override the black fill color for dark mode users
+does not work:
 
 <img src="test.svg">
 
-### Inlined `<svg>` does not work
+
+### Inlined `<svg>` does not work:
+
+GitHub's markdown renderer does not allow `svg` elements,
+turning the following `svg` element into a mangled text node
+and a `pre`:
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" style="background: transparent">
   <style>
