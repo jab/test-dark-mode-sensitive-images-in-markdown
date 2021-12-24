@@ -1,4 +1,10 @@
-# Dark-mode-sensitive SVG in GitHub markdown tests
+# Testing dark-mode-sensitive images in GitHub markdown
+
+### GitHub's [anchor filter URL syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#specifying-the-theme-an-image-is-shown-to) works
+
+![Only shown to GitHub Light Mode users](/light-mode.svg#gh-light-mode-only)
+![Only shown to GitHub Dark Mode users](/dark-mode.svg#gh-dark-mode-only)
+
 
 ### Inlined `<img src="test.svg">` does not work
 
